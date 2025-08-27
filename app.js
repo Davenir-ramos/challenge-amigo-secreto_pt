@@ -6,15 +6,19 @@ let amigoSorteado = '';
 function adicionarAmigo(){
     let nome = document.querySelector('input').value.trim(); //trim() remove espaços
    
-    if (nome){
-        amigos.push(nome);
-        limparCampo();
-        atualizaListaAmigos();
-       
-    } else {
-        alert('Por favor, insira um nome');
-        return;
+   if (nome == ''){
+       alert('Por favor, insira um nome');
+       return;
+    } 
+    // Verificado se o  amigo  foi adicionado
+    if(amigos.some(amigo => amigo.toLowerCase() === nome.toLowerCase())){
+         alert('O amigo já foi adicionado! Adiciona outro');
+         limparCampo();
+         return
     }
+    amigos.push(nome);
+    atualizaListaAmigos();
+    limparCampo();  
 }
 
 function limparCampo(){
@@ -36,7 +40,7 @@ function atualizaListaAmigos(){
 
 function sortearAmigo(){
     if (amigos.length === 0){
-        alert('Nenhum amingo para sortear! Adiciona nome do amigo');
+        alert('Nenhum **amingo** para sortear! Adiciona nome do amigo');
     } else {
         let indexSorteado = Math.floor(Math.random() * amigos.length);
         amigoSorteado = amigos[indexSorteado];
