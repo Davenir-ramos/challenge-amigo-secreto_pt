@@ -20,10 +20,12 @@
   ✔️ Validar entradas (não permitir nomes vazios).<br>
   ✔️ Sortear aleatoriamente um amigo da lista.<br>
   ✔️ Mostrar o resultado do sorteio.
-
+  
 ## Demostração
 
-
+ ![Amigo-Secreto](/assets/page.png) 
+- [Apresentação funcional](https://youtu.be/ml8B6G_bjuQ) 
+ 
 ## 🛠️ Tecnologias
 <div>
   <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
@@ -41,3 +43,4 @@
 - Mônica Mazzochi Hillman
 - Gabrielle Ribeiro Gomes
 - Rodrigo da Silva Ferreira Caneppele
+'
