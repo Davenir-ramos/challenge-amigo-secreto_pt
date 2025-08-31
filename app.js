@@ -2,21 +2,30 @@
 //  Aqui você deverá desenvolver a lógica para resolver o problema.
 let amigos = [];
 let amigoSorteado = '';
+function exibirAlertTela(tag, texto){
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+}
+
+function exibirMensagem(){
+    exibirAlertTela('h3', '');
+}
 
 function adicionarAmigo(){
     let nome = document.querySelector('input').value.trim(); //trim() remove espaços
    
    if (nome == ''){
-       alert('Por favor, insira um nome');
+       exibirAlertTela('h3','Por favor, insira um nome');
        return;
     } 
     // Verificado se o  amigo  foi adicionado
     if(amigos.some(amigo => amigo.toLowerCase() === nome.toLowerCase())){
-         alert('O amigo já foi adicionado! Adiciona outro');
+         exibirAlertTela('h3','O amigo já foi adicionado! Adiciona outro');
          limparCampo();
          return
     }
     amigos.push(nome);
+    exibirMensagem();
     atualizaListaAmigos();
     limparCampo();  
 }
@@ -40,7 +49,7 @@ function atualizaListaAmigos(){
 
 function sortearAmigo(){
     if (amigos.length === 0){
-        alert('Nenhum **amingo** para sortear! Adiciona nome do amigo');
+        exibirAlertTela('h3','Nenhum **amigo** para sortear! Adiciona nome do amigo');
     } else {
         let indexSorteado = Math.floor(Math.random() * amigos.length);
         amigoSorteado = amigos[indexSorteado];

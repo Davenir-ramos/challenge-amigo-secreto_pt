@@ -6,6 +6,7 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
+     --color-alert: #d4240d;
 }
 
 /* Estilos gerais */
@@ -77,6 +78,10 @@ body {
     width: 100%;
     max-width: 600px;
     margin-top: 20px;
+}
+
+.input-section h3 {
+    color: var(--color-alert);
 }
 
 .input-name {
