@@ -24,7 +24,8 @@
 ## Demostração
 
  ![Amigo-Secreto](/assets/page.png) 
-- [Apresentação funcional](https://youtu.be/ml8B6G_bjuQ) 
+- [Apresentação funcional](https://youtu.be/ml8B6G_bjuQ)
+- [Teste aqui](https://challenge-amigo-secreto-pt-pied.vercel.app/)
  
 ## 🛠️ Tecnologias
 <div>
