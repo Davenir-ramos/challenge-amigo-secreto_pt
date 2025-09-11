@@ -6,7 +6,7 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
-     --color-alert: #d4240d;
+    --color-alert: #d4240d;
 }
 
 /* Estilos gerais */
@@ -38,6 +38,9 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px 0 0;
+}
+.header-banner-badge {
+     width: 20%;
 }
 
 /* Seção de entrada */
@@ -80,7 +83,7 @@ body {
     margin-top: 20px;
 }
 
-.input-section h3 {
+.input-section-alert {
     color: var(--color-alert);
 }
 

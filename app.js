@@ -2,6 +2,7 @@
 //  Aqui você deverá desenvolver a lógica para resolver o problema.
 let amigos = [];
 let amigoSorteado = '';
+
 function exibirAlertTela(tag, texto){
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
@@ -48,17 +49,23 @@ function atualizaListaAmigos(){
 }
 
 function sortearAmigo(){
+
     if (amigos.length === 0){
         exibirAlertTela('h3','Nenhum **amigo** para sortear! Adiciona nome do amigo');
+        return;
+    } else if (amigos.length < 3){
+         exibirAlertTela('h3', `Você adicionou apenas ${amigos.length} amigos. Adicione pelo menos 3`);
     } else {
         let indexSorteado = Math.floor(Math.random() * amigos.length);
         amigoSorteado = amigos[indexSorteado];
         resultado();
         limparReiniciar();
     }
+    
 }
 
 function resultado(){
+
     let resultado = document.getElementById('resultado');    
     resultado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
     amigos = [];
