@@ -21,9 +21,9 @@ function adicionarAmigo(){
     } 
     // Verificado se o  amigo  foi adicionado
     if(amigos.some(amigo => amigo.toLowerCase() === nome.toLowerCase())){
-         exibirAlertTela('h3','O amigo já foi adicionado! Adiciona outro');
-         limparCampo();
-         return
+        exibirAlertTela('h3','O amigo já foi adicionado! Adiciona outro');
+        limparCampo();
+        return
     }
     amigos.push(nome);
     exibirMensagem();
@@ -54,7 +54,8 @@ function sortearAmigo(){
         exibirAlertTela('h3','Nenhum **amigo** para sortear! Adiciona nome do amigo');
         return;
     } else if (amigos.length < 3){
-         exibirAlertTela('h3', `Você adicionou apenas ${amigos.length} amigos. Adicione pelo menos 3`);
+        exibirAlertTela('h3', `Você adicionou apenas ${amigos.length} amigos. Adicione pelo menos 3`);
+        return;
     } else {
         let indexSorteado = Math.floor(Math.random() * amigos.length);
         amigoSorteado = amigos[indexSorteado];
@@ -64,8 +65,7 @@ function sortearAmigo(){
     
 }
 
-function resultado(){
-
+function resultado(){ 
     let resultado = document.getElementById('resultado');    
     resultado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
     amigos = [];

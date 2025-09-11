@@ -44,4 +44,3 @@
 - Mônica Mazzochi Hillman
 - Gabrielle Ribeiro Gomes
 - Rodrigo da Silva Ferreira Caneppele
-'
